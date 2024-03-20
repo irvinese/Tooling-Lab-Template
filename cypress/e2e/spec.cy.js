@@ -13,21 +13,16 @@ describe(`My First Test`, () => {
 
     cy.get(`.action-email`).should(`have.value`, `fake@email.com`)
     */
+    
     cy.visit(`https://www.google.com/`)
+    
+    cy.get(`textarea.gLFyf`).type(`Shane`)
 
-    cy.contains(`Search`).click()
+    cy.get(`ul.G43f7e`).first().click()
+   
+    cy.get(`textarea.gLFyf`).should(`have.length`, 1)
 
-    cy.url().should(`include`, `/commands/acitions`)
-
-    cy.get(`Name`).type(`Shane`)
-
-    cy.get(`.dropdwon-selector`).select(`Option 1`)
-
-    cy.get(`.submit-button`).click()
-
-    cy.get(`.history-log`).should(`have.length`, 1)
-
-    cy.get(`.history-log`).contains(`Shane`).should(`exist`)
+    cy.get(`textarea.gLFyf`).contains(`shane`).should(`exist`)
 
   })
 })

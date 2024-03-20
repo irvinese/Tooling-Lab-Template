@@ -6,6 +6,7 @@
 const fs = require(`fs`);
 const path = require(`path`);
 
+// eslint-disable-next-line no-unused-vars
 const bootstrapClasses = require(`./bootstrapclasses`);
 
 const html = fs.readFileSync(path.resolve(__dirname, `../index.html`), `utf8`);
